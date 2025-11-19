@@ -13,7 +13,7 @@ A modern Flask web app that fetches real-time weather and a 5-day forecast using
 
 # 1. Clone the repo:
 
-git clone https://github.com/FlappyBird1296/weather-app.git
+git clone https://github.com/FlappyBird1296/weather-forecast.git
 cd weather-app
 
 # 2. Create and edit .env from .env.example:
