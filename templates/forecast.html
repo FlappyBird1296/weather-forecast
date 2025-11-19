@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast - Smart Forecast</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="container">
+            <a href="{{ url_for('index') }}" class="back">⬅ New Search</a>
+
+            <div class="glass-card current">
+                <div class="current-left">
+                    <h2>{{current.city}}</h2>
+                    <div class="temp">{{ current.tempC }}°C</div>
+                    <div class="desc">{{ current.description }}</div>
+                    <div class="meta">Feels like {{ current.feelsLikeC }}°C • Humidity {{ current.humidity }}% • Wind {{
+                        current.windSpeed }} m/s</div>
+
+                </div>
+                <div class="current-right">
+                    <img src="http://openweathermap.org/img/wn/{{ current.icon }}@4x.png" alt="icon">
+                </div>
+            </div>
+
+            <div class="forecast-row">
+                {% for day in days %}
+                <div class="glass-card day">
+                    <div class="day-date">{{ day.date }}</div>
+                    <img src="http://openweathermap.org/img/wn/{{ day.icon }}@4x.png" alt="icon" class="day-icon" />
+                    <div class="day-desc">{{ day.description }}</div>
+                    <div class="day-temp">Min {{ day.minTemp }}°C • Max {{ day.maxTemp }}°C</div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <footer class="glass-card small">
+                <div>Data from OpenWeatherMap • Built with Flask</div>
+                <div class="small-right">A1 Glass — Blue/Purple</div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
