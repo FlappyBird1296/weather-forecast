@@ -16,8 +16,8 @@ A modern Flask web app that fetches real-time weather and a 5-day forecast using
 git clone https://github.com/FlappyBird1296/weather-forecast.git
 cd weather-app
 
-# 2. Create and edit .env from .env.example:
-API_KEY=your_openweathermap_api_key
+# 2. Create and edit .env file:
+API_KEY = "your_openweathermap_api_key"
 
 # 3. Install dependencies:
 python -m pip install -r requirements.txt
@@ -26,23 +26,18 @@ python -m pip install -r requirements.txt
 python app.py
 Open http://127.0.0.1:5000 in your browser.
 
-## 📦 Requirements
+## Requirements
 
 Flask==2.2.5
 python-dotenv==1.0.0
-requests==2.31.0
+requests==2.31.0  
 
-## 🔮 Future Improvements
-
-- Add geolocation (browser) to auto-suggest city.
-- Cache API responses to avoid rate limits.  
-
-## 👨‍💻 Author
+## Author
 **Manoranjan Gope**  
 B.Tech CSE (AI & ML)
 First year
 
-## ⭐ Contribute
+## Contribute
 Pull requests are welcome!  
 If you like this project, please ⭐ the repo.
  
